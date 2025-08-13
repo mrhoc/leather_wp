@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     });
     if ($(window).width() < 992) {
-        $('.mb-menu li > a').on('click', function (e) {
+        $('.mb-menu li.menu-item-has-children > a').on('click', function (e) {
             e.preventDefault();
             $(this).parent().toggleClass('active');
             $(this).closest('li').find('.sub_menu_dropdown').slideToggle('fast');

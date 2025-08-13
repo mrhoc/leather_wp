@@ -29,7 +29,7 @@
             --colorfooter: #ffffff;
             --colorbgmenumb: #5B3921;
             --colortextmenumb: #BBA79C;
-            --height-head: 62px;
+            --height-head: 70px;
             --imgselect: url(<?php echo get_template_directory_uri(); ?>/img/ico-select.svg?v=51);
             --bgsubcribe: url('<?php echo get_template_directory_uri(); ?>/img/modal-banner.jpg?v=51');
             --bg-filter: url('<?php echo get_template_directory_uri(); ?>/img/filter.svg?v=51');

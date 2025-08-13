@@ -407,7 +407,8 @@ section {
 }
 
 .breadcrumb .container {
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .breadcrumb a {
@@ -1203,4 +1204,7 @@ section {
         max-width: 250px;
         text-align: center;
     }
+}
+.product-block .product-detail .pro-price,.card-price{
+    margin-bottom: 10px;
 }
