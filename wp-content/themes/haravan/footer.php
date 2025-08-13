@@ -69,8 +69,8 @@
                     <ul class="social-footer d-flex mg-top-10 d-flex-center">
                         <li class="tiktok"><a href="https://www.tiktok.com/r"><img width="18" height="18"
                                                                                    src="<?php echo get_template_directory_uri(); ?>/img/tik-tok.svg?v=51" alt="Liên hệ với chúng tôi qua Tiktok"></a></li>
-                        <li class="tiktok"><a href="#"><img width="18" height="18"
-                                                                                   src="<?php echo get_template_directory_uri(); ?>/img/tik-tok.svg?v=51" alt="Liên hệ với chúng tôi qua Tiktok"></a></li>
+                        <li class="zalo"><a href="#"><img width="20" height="20"
+                                                                                   src="<?php echo get_template_directory_uri(); ?>/img/Icon_of_Zalo.svg.png" alt="Liên hệ với chúng tôi qua Tiktok"></a></li>
                         <li class="instagram"><a href="https://www.facebook.com/"><i class="fa fa-instagram"
                                                                                      aria-hidden="true"></i></a></li>
                         <li class="facebook"><a href="https://www.instagram.com//"><i class="fa fa-facebook"
