@@ -162,5 +162,18 @@ function openQuickView(productUrl) {
 //     $(this).toggleClass('minus-menu');
 // });
 
+var $searchIcon = $(".js-search-desktop");
+var $dropdown = $(".header-action_dropdown");
 
+$searchIcon.on("click", function(e) {
+    e.preventDefault();
+    $dropdown.closest('li').toggleClass("show-search");
+});
+
+// Click ra ngoài thì đóng
+$(document).on("click", function(e) {
+    if (!$(e.target).closest(".header-action_dropdown, .js-search-desktop").length) {
+        $dropdown.closest('li').removeClass("show-search");
+    }
+});
 
