@@ -62,6 +62,78 @@
             </div>
         </div>
     </section>
+
+    <!-- Related Products Section -->
+    <section id="related-products">
+        <div class="container">
+            <div class="top-title">
+                <div class="title-section">
+                    <h2><span>Sản phẩm liên quan</span></h2>
+                </div>
+            </div>
+            
+            <ul class="related-products-grid">
+                <?php
+                // Lấy danh mục của sản phẩm hiện tại
+                $categories = get_the_category();
+                if (!empty($categories)) {
+                    $category_ids = array();
+                    foreach ($categories as $category) {
+                        $category_ids[] = $category->term_id;
+                    }
+                    
+                    // Lấy sản phẩm liên quan cùng danh mục
+                    $related_products = new WP_Query(array(
+                        'category__in' => $category_ids,
+                        'post__not_in' => array(get_the_ID()),
+                        'posts_per_page' => 8,
+                        'orderby' => 'rand',
+                        'post_type' => 'post'
+                    ));
+                    
+                    if ($related_products->have_posts()) {
+                        while ($related_products->have_posts()) {
+                            $related_products->the_post();
+                            ?>
+                            <li>
+                                <a href="<?php the_permalink(); ?>" class="related-product-card">
+                                    <div class="related-product-media">
+                                        <?php if (has_post_thumbnail()) : ?>
+                                            <?php the_post_thumbnail('medium', array('class' => 'related-product-img')); ?>
+                                        <?php else : ?>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg" alt="<?php the_title(); ?>" class="related-product-img">
+                                        <?php endif; ?>
+                                        
+                                        <?php
+                                        // Hiển thị badge nếu có
+                                        $price = get_post_meta(get_the_ID(), 'price', true);
+                                        if ($price) {
+                                            echo '<span class="related-product-badge">Có sẵn</span>';
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="related-product-info">
+                                        <h3 class="related-product-title"><?php the_title(); ?></h3>
+                                        <?php if ($price) : ?>
+                                            <p class="related-product-price"><?php echo format_vnd_price($price); ?>₫</p>
+                                        <?php endif; ?>
+                                    </div>
+                                </a>
+                            </li>
+                            <?php
+                        }
+                        wp_reset_postdata();
+                    } else {
+                        // Nếu không có sản phẩm cùng category, hiển thị thông báo
+                        echo '<li class="no-related-products" style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; color: #8c827a; font-style: italic;">';
+                        echo 'Không có sản phẩm liên quan trong danh mục này.';
+                        echo '</li>';
+                    }
+                }
+                ?>
+            </ul>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>

@@ -92,3 +92,42 @@ function get_excerpt_limit_chars($char_limit = 100) {
     }
     return $excerpt;
 }
+
+function my_custom_subscribe_form() {
+    ob_start();
+
+    // Nếu form submit
+    if (isset($_POST['contact_email'])) {
+        $email = sanitize_email($_POST['contact_email']);
+
+        if (is_email($email)) {
+            $to = get_option('admin_email'); // Email admin
+            $subject = 'Có người đăng ký nhận bản tin';
+            $message = "Email đăng ký: " . $email;
+            $headers = array('Content-Type: text/html; charset=UTF-8');
+
+            if (wp_mail($to, $subject, $message, $headers)) {
+                echo '<p style="color:green;">✅ Đăng ký thành công! Cảm ơn bạn.</p>';
+            } else {
+                echo '<p style="color:red;">❌ Lỗi gửi email. Vui lòng thử lại.</p>';
+            }
+        } else {
+            echo '<p style="color:red;">⚠️ Email không hợp lệ.</p>';
+        }
+    }
+    ?>
+
+    <!-- Form HTML -->
+    <form method='post' class='contact-form'>
+        <div class="form-group mb-0">
+            <input type="hidden" name="contact_tags" value="khách hàng tiềm năng, bản tin" />
+            <input type="email" required name="contact_email" placeholder="Email" />
+        </div>
+        <button class="btn" type="submit">Đăng ký</button>
+    </form>
+
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('custom_email_form', 'my_custom_subscribe_form');
+

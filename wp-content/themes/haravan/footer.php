@@ -62,22 +62,9 @@
                         </p>
                     </div>
                     <div class="form-ft-wanda">
-                        <form accept-charset='UTF-8' action='/account/contact' class='contact-form' method='post'>
-                            <input name='form_type' type='hidden' value='customer'>
-                            <input name='utf8' type='hidden' value='✓'>
-                            <div class="form-group mb-0">
-                                <input type="hidden" id="contact_tags" name="contact[tags]"
-                                       value="khách hàng tiềm năng, bản tin" />
-                                <input type="email" required="required" name="contact[email]" id="contact_email"
-                                       placeholder="Email" />
-                            </div>
-                            <button class="btn" type="submit">Đăng ký</button>
+                        <?php echo do_shortcode('[custom_email_form]');
+                        ?>
 
-                            <input name='__RequestVerificationToken' type='hidden'
-                                   value='CfDJ8FyFPV59mBtNhmQGz0fYZt9AXtFbNxb4DCNYy8YvXcChXt4kFJlXUoM8c9P6iSRbEHaTrEiMQXnRGS4k7y5TwJhR0hINKcI_BCifZXesRz_Vz2X87TctDj3TkDZTKO3QZiA2jW4gYtCSpc67BF_kd5U'>
-                            <input id='7d0c39ffac7f4a7c828a23d3db5aace6' name='g-recaptcha-response'
-                                   type='hidden'><!--<script src='https://www.google.com/recaptcha/api.js?render=6LchSLkqAAAAABVHBpeFgg8N-WgkYsr5fO6GUF_s'></script> --><!--<script>let recaptchaElm=document.getElementById('7d0c39ffac7f4a7c828a23d3db5aace6');let recaptchaForm=recaptchaElm.parentNode;recaptchaForm.addEventListener("submit",function(formEvent){if(!recaptchaElm.value){formEvent.preventDefault();grecaptcha.ready(function(){grecaptcha.execute('6LchSLkqAAAAABVHBpeFgg8N-WgkYsr5fO6GUF_s',{action:'submit'}).then(function(token){recaptchaElm.value=token;recaptchaForm.requestSubmit(formEvent.submitter)})})}})</script> -->
-                        </form>
                     </div>
                     <ul class="social-footer d-flex mg-top-10 d-flex-center">
                         <li class="tiktok"><a href="https://www.tiktok.com/r"><img width="18" height="18"
