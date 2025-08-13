@@ -740,7 +740,6 @@ section {
 
 .card-price {
     color: red;
-);
     font-weight: 700;
 }
 
@@ -893,5 +892,315 @@ section {
 @media (max-width: 479px) {
     .related-products-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Search Results Page ===== */
+#search-results {
+    padding: 64px 0;
+    background: #fbfaf8;
+}
+
+.search-info {
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.search-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #3b2b22;
+}
+
+.search-info strong {
+    color: var(--colorshop);
+}
+
+.search-stats {
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.search-stats p {
+    margin: 0;
+    color: #8c827a;
+}
+
+.search-stats strong {
+    color: var(--colorshop);
+}
+
+.search-products-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.search-product-item {
+    margin: 0;
+}
+
+.search-product-card {
+    display: block;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid rgba(91, 57, 33, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.search-product-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(91, 57, 33, 0.28);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.10);
+}
+
+.search-product-media {
+    position: relative;
+    aspect-ratio: 4/3;
+    background: #eae7e4;
+}
+
+.search-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.search-product-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--bgshop);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(91, 57, 33, 0.35);
+}
+
+.search-product-info {
+    padding: 20px;
+}
+
+.search-product-title {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3b2b22;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.search-product-price {
+    color: #e74c3c;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 0 12px;
+}
+
+.search-product-excerpt {
+    color: #8c827a;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.search-product-category {
+    font-size: 12px;
+    color: var(--colorshop);
+    font-weight: 500;
+}
+
+.search-product-category span {
+    background: rgba(91, 57, 33, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Pagination */
+.search-pagination {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.search-pagination .page-numbers {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+}
+
+.search-pagination .page-numbers li {
+    margin: 0;
+}
+
+.search-pagination .page-numbers a,
+.search-pagination .page-numbers span {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #3b2b22;
+    background: #fff;
+    border: 1px solid rgba(91, 57, 33, 0.15);
+    transition: all 0.2s ease;
+}
+
+.search-pagination .page-numbers a:hover {
+    background: var(--colorshop);
+    color: #fff;
+    border-color: var(--colorshop);
+}
+
+.search-pagination .page-numbers .current {
+    background: var(--colorshop);
+    color: #fff;
+    border-color: var(--colorshop);
+}
+
+/* No Results */
+.no-search-results {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.no-results-icon {
+    margin-bottom: 24px;
+}
+
+.no-search-results h3 {
+    margin: 0 0 16px;
+    color: #3b2b22;
+    font-size: 24px;
+}
+
+.no-search-results p {
+    margin: 0 0 32px;
+    color: #8c827a;
+    font-size: 16px;
+}
+
+.no-results-suggestions {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto 32px;
+    padding: 20px;
+    background: #fbfaf8;
+    border-radius: 8px;
+}
+
+.no-results-suggestions h4 {
+    margin: 0 0 16px;
+    color: #3b2b22;
+    font-size: 16px;
+}
+
+.no-results-suggestions ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #8c827a;
+}
+
+.no-results-suggestions li {
+    margin-bottom: 8px;
+}
+
+.no-results-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.no-results-actions .btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--bgshop);
+    color: #fff;
+    border: 1px solid var(--bgshop);
+}
+
+.btn-primary:hover {
+    background: var(--colorshophover);
+    border-color: var(--colorshophover);
+}
+
+.btn-outline {
+    background: #fff;
+    color: var(--colorshop);
+    border: 1px solid var(--colorshop);
+}
+
+.btn-outline:hover {
+    background: var(--colorshop);
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+    .search-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    #search-results {
+        padding: 48px 0;
+    }
+    
+    .search-products-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .search-product-info {
+        padding: 16px;
+    }
+    
+    .no-results-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .no-results-actions .btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
     }
 }

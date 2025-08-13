@@ -106,25 +106,7 @@
                                     <div class="header-dropdown_content">
                                         <p class="title-search">Tìm kiếm</p>
                                         <div class="site_search">
-                                            <form action="/search" class="wanda-mxm-search">
-                                                <div class="search-inner">
-                                                    <input type="hidden" name="type" value="product">
-                                                    <input name="q" autocomplete="off"
-                                                           class="searchinput input-search search-input" type="text"
-                                                           size="20" placeholder="Tìm kiếm sản phẩm..."
-                                                           aria-label="Search">
-                                                </div>
-                                                <button type="submit" class="btn-search" id="search-header-btn"
-                                                        aria-label="Tìm kiếm">
-                                                    <img width="24" height="24" src="<?php echo get_template_directory_uri(); ?>/img/searcg-icon.svg?v=51"
-                                                         alt="Tìm kiếm">
-                                                </button>
-                                            </form>
-                                            <div id="wanda-smart-search"
-                                                 class="smart-search-wrapper ajaxSearchResults">
-                                                <div class="results-seach">
-                                                </div>
-                                            </div>
+                                            <?php get_search_form(); ?>
                                         </div>
                                     </div>
                                 </div>

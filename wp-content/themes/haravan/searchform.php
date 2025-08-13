@@ -2,20 +2,18 @@
 /**
  * The template for displaying search forms
  *
- * @package Haravan
  */
 ?>
+<form role="search" method="get" class="search-form wanda-mxm-search" action="<?php echo esc_url(home_url('/')); ?>">
+    <div class="search-inner">
 
-<form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
-    <label>
-        <span class="screen-reader-text"><?php echo esc_html_x('Search for:', 'label', 'haravan'); ?></span>
-        <input type="search" class="search-field" placeholder="<?php echo esc_attr_x('Search &hellip;', 'placeholder', 'haravan'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-    </label>
-    <button type="submit" class="search-submit">
-        <span class="screen-reader-text"><?php echo esc_html_x('Search', 'submit button', 'haravan'); ?></span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.35-4.35"></path>
-        </svg>
+        <input type="search" class="searchinput input-search search-input search-field" placeholder="<?php echo esc_attr_x('Search &hellip;', 'placeholder', 'haravan'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+    </div>
+    <button type="submit" class="btn-search" id="search-header-btn"
+            aria-label="Tìm kiếm">
+        <img width="24" height="24" src="<?php echo get_template_directory_uri(); ?>/img/searcg-icon.svg?v=51"
+             alt="Tìm kiếm">
     </button>
 </form>
+
+
