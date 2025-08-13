@@ -18,6 +18,24 @@ $(document).ready(function () {
 
     // Tab functionality for home-tab-col
     initHomeTabs();
+
+    // Back to top
+    const $backToTop = $('.back-to-top');
+
+    // Show/hide on scroll
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 200) {
+            $backToTop.addClass('show');
+        } else {
+            $backToTop.removeClass('show');
+        }
+    });
+
+    // Click to scroll to top smoothly
+    $backToTop.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 500);
+    });
 });
 
 // Home Tab Collection functionality

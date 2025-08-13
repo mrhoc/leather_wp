@@ -111,7 +111,7 @@
     </ul>
     <div class="btn-support"></div>
 </div>
-<button class="back-to-top"><i class="fa fa-angle-double-up"></i> back to top</button>
+<button class="back-to-top"><i class="fa fa-angle-double-up"></i></button>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slick/slick.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/custome-js.js"></script>
