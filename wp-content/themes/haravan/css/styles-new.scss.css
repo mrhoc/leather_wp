@@ -1640,9 +1640,9 @@ footer .top-ft-wanda .social-footer li a i {
 }
 
 .social-fixed ul {
-    max-height: 0;
+    /* max-height: 0;
     overflow: hidden;
-    visibility: hidden;
+    visibility: hidden; */
 }
 
 .social-fixed ul.active {
