@@ -29,9 +29,9 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-6 tablink mg-bottom-15">
                     <div class="title-footer">
-                        <h4 class="h4">
-                            Liên kết
-                        </h4>
+<!--                        <h4 class="h4">-->
+<!--                            Liên kết-->
+<!--                        </h4>-->
                     </div>
                     <div class="footer-link-wanda">
                         <ul>
@@ -68,6 +68,8 @@
                     </div>
                     <ul class="social-footer d-flex mg-top-10 d-flex-center">
                         <li class="tiktok"><a href="https://www.tiktok.com/r"><img width="18" height="18"
+                                                                                   src="<?php echo get_template_directory_uri(); ?>/img/tik-tok.svg?v=51" alt="Liên hệ với chúng tôi qua Tiktok"></a></li>
+                        <li class="tiktok"><a href="#"><img width="18" height="18"
                                                                                    src="<?php echo get_template_directory_uri(); ?>/img/tik-tok.svg?v=51" alt="Liên hệ với chúng tôi qua Tiktok"></a></li>
                         <li class="instagram"><a href="https://www.facebook.com/"><i class="fa fa-instagram"
                                                                                      aria-hidden="true"></i></a></li>
