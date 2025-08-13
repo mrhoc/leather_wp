@@ -111,7 +111,7 @@
                                  data-original-title="Liên hệ với chúng tôi qua Instagram"><i class="fa fa-instagram"
                                                                                               aria-hidden="true"></i></a></li>
     </ul>
-    <div class="btn-support"></div>
+    <div class="btn-support"><img width="30" height="" src="<?php echo get_template_directory_uri(); ?>/img/customer-icon-service.svg" alt=""></div>
 </div>
 <button class="back-to-top"><i class="fa fa-angle-double-up"></i></button>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.7.1.min.js"></script>
